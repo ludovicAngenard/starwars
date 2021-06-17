@@ -3,7 +3,7 @@
 abstract class Model {
     public static $entity_list = [];
 
-    public function getEntityByNameAndCollection($collection, $name){
+    public static function getEntityByNameAndCollection($collection, $name){
         foreach (Model::$entity_list[$collection] as $key => $value) {
             if ($value->name == $name){
                 return $value;

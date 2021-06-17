@@ -13,7 +13,7 @@ class FilmsController implements FilmsControllerInterface{
         return Film::getAllEntitiesOfCollection($this->collectionName);
     }
     public function getFilmByTitle($title){
-        return Film::getEntityByTitleAndCollection($this->collectionName, $title);
+        return Film::getEntityByTitle($title);
     }
     public function addFilm($film){
         Film::addEntityByCollection($this->collectionName, new Film(

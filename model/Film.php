@@ -32,8 +32,8 @@ class Film extends Model {
             $this->url = $url;
     }
 
-    public function getEntityByTitleAndCollection($collection, $title){
-        foreach (Model::$entity_list[$collection] as $key => $value) {
+    public static function getEntityByTitle($title){
+        foreach (Model::$entity_list['films'] as $key => $value) {
             if ($value->title == $title){
                 return $value;
             }

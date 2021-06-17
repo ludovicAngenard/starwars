@@ -12,17 +12,22 @@ spl_autoload_register(function ($class_name) {
 // get the data from the api
 
 $filmsController = new FilmsController();
-
+$film = $filmsController->getFilms();
 
 $peopleController = new PeopleController();
+$people = $peopleController->getPeople();
 
 $planetsController = new PlanetsController();
+$planets = $planetsController->getPlanets();
 
 $spaceshipsController = new SpaceshipsController();
+$spaceships = $spaceshipsController->getSpaceships();
 
 $speciesController = new SpeciesController();
+$species = $speciesController->getSpecies();
 
 $vehiclesController = new VehiclesController();
+$vehicles = $vehiclesController->getVehicles();
 
 // You can access to specific data by using this :
 var_dump($filmsController->getFilmByTitle("A New Hope"));

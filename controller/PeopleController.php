@@ -8,7 +8,6 @@ class PeopleController implements PeopleControllerInterface{
         $response = json_decode($response);
 
         foreach ($response->results as $person) {
-            //var_dump( $person);
             $this->addPerson($person);
 
         }
